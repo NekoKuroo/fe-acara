@@ -16,20 +16,20 @@ const Register = () => {
             errors} = useRegister();
             
     return (
-        <div className="flex w-full flex-col lg:flex-row items-center gap-10 justify-center lg:gap-20 p-8">
-            <div className="flex w-fulllg:w-1/3 flex-col items-center justify-center gap-10">
+        <div className="flex w-full flex-col items-center justify-center lg:gap-10 p-8 lg:flex-row">
+            <div className="flex w-full flex-col items-center justify-center gap-10 lg:w-1/3">
                 <Image
                     src="/images/general/logo.svg"
-                    alt="Register"
+                    alt="logo"
                     width={180}
                     height={180}
                 />
                 <Image
                     src="/images/illustrations/login.svg"
-                    alt="Register"
-                    className="w-1/2"
-                    width={400}
-                    height={400}
+                    alt="register"
+                    className="w-2/3 lg:w-full"
+                    width={1024}
+                    height={1024}
                 />
             </div>
                 <Card>
