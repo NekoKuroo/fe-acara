@@ -1,7 +1,7 @@
 import environtment from '@/config/environment'
 import axios from 'axios'
 import { getSession } from 'next-auth/react';
-import type { Session } from 'next-auth';
+import { Session } from 'next-auth';
 
 
 interface CustomSession extends Session {
@@ -33,3 +33,22 @@ instance.interceptors.response.use(
 )
 
 export default instance
+
+/* biar gak error pas cek di devtool browseer
+
+// src/libs/axios/instance.ts
+import environtment from '@/config/environment';
+import axios from 'axios';
+
+const headers = {
+    "Content-Type": "application/json"
+};
+
+const instance = axios.create({
+    baseURL: environtment.API_URL,
+    headers,
+    timeout: 60 * 1000
+});
+
+export default instance;
+*/
