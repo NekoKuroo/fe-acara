@@ -19,8 +19,8 @@ export async function getServerSideProps(context: {query: {code: string}}) {
         const result = await authServices.activation({code: context.query.code})
         console.log(result.data)    
         // pake yg ini berhasil "data" nya berhasil di registrasi
-        if (result.data.meta?.status === 200) {
-        // if(result.data.data){
+       
+        if(result.data.data){
             return {
                 props: {
                     status: "success",
